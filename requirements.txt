@@ -9,3 +9,4 @@ ragas
 deepeval
 streamlit
 python-dotenv
+pytest

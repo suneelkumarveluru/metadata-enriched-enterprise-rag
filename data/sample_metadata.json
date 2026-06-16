@@ -1,0 +1,67 @@
+[
+  {
+    "document_id": "doc-001",
+    "chunk_id": "doc-001-chunk-01",
+    "document_type": "policy",
+    "business_domain": "insurance",
+    "sensitivity": "internal",
+    "owner": "claims-team",
+    "access_role": ["analyst", "manager", "auditor"],
+    "source_system": "sharepoint",
+    "effective_date": "2026-01-01",
+    "data_quality_score": 95,
+    "lineage_id": "pipeline-claims-001"
+  },
+  {
+    "document_id": "doc-002",
+    "chunk_id": "doc-002-chunk-01",
+    "document_type": "contract",
+    "business_domain": "finance",
+    "sensitivity": "confidential",
+    "owner": "finance-team",
+    "access_role": ["manager", "auditor"],
+    "source_system": "snowflake",
+    "effective_date": "2026-02-15",
+    "data_quality_score": 91,
+    "lineage_id": "pipeline-finance-002"
+  },
+  {
+    "document_id": "doc-003",
+    "chunk_id": "doc-003-chunk-01",
+    "document_type": "report",
+    "business_domain": "healthcare",
+    "sensitivity": "restricted",
+    "owner": "compliance-team",
+    "access_role": ["auditor"],
+    "source_system": "s3",
+    "effective_date": "2026-03-10",
+    "data_quality_score": 88,
+    "lineage_id": "pipeline-compliance-003"
+  },
+  {
+    "document_id": "doc-004",
+    "chunk_id": "doc-004-chunk-01",
+    "document_type": "claim",
+    "business_domain": "insurance",
+    "sensitivity": "internal",
+    "owner": "claims-team",
+    "access_role": ["analyst", "manager"],
+    "source_system": "databricks",
+    "effective_date": "2026-04-05",
+    "data_quality_score": 93,
+    "lineage_id": "pipeline-claims-004"
+  },
+  {
+    "document_id": "doc-005",
+    "chunk_id": "doc-005-chunk-01",
+    "document_type": "policy",
+    "business_domain": "hr",
+    "sensitivity": "confidential",
+    "owner": "hr-team",
+    "access_role": ["manager", "auditor"],
+    "source_system": "sharepoint",
+    "effective_date": "2026-05-01",
+    "data_quality_score": 90,
+    "lineage_id": "pipeline-hr-005"
+  }
+]

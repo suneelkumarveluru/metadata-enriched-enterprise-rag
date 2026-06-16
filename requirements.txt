@@ -1,0 +1,11 @@
+pandas
+numpy
+scikit-learn
+langchain
+llama-index
+chromadb
+faiss-cpu
+ragas
+deepeval
+streamlit
+python-dotenv

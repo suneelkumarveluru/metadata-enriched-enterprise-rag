@@ -55,3 +55,47 @@ The RAG system enriches every document chunk with enterprise metadata before ind
 | data_quality_score | Quality score for document or chunk | 92 |
 | lineage_id | Reference to upstream system/pipeline | pipeline-claims-001 |
 
+## How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/suneelkumarveluru/metadata-enriched-enterprise-rag.git
+cd metadata-enriched-enterprise-rag
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment:
+
+```bash
+# Windows
+.venv\Scripts\activate
+
+# Mac/Linux
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the demo:
+
+```bash
+python demo.py
+```
+
+Run tests:
+
+```bash
+pytest
+```
+
+

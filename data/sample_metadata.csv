@@ -1,0 +1,6 @@
+document_id,chunk_id,document_type,business_domain,sensitivity,owner,access_role,source_system,effective_date,data_quality_score,lineage_id
+doc-001,doc-001-chunk-01,policy,insurance,internal,claims-team,analyst|manager|auditor,sharepoint,2026-01-01,95,pipeline-claims-001
+doc-002,doc-002-chunk-01,contract,finance,confidential,finance-team,manager|auditor,snowflake,2026-02-15,91,pipeline-finance-002
+doc-003,doc-003-chunk-01,report,healthcare,restricted,compliance-team,auditor,s3,2026-03-10,88,pipeline-compliance-003
+doc-004,doc-004-chunk-01,claim,insurance,internal,claims-team,analyst|manager,databricks,2026-04-05,93,pipeline-claims-004
+doc-005,doc-005-chunk-01,policy,hr,confidential,hr-team,manager|auditor,sharepoint,2026-05-01,90,pipeline-hr-005

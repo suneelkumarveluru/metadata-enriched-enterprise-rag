@@ -37,3 +37,21 @@ Policy-Aware Retrieval
 LLM Answer Generation
    ↓
 Citations + Audit Log + Evaluation
+## Metadata Fields
+
+The RAG system enriches every document chunk with enterprise metadata before indexing into the vector store.
+
+| Field | Description | Example |
+|---|---|---|
+| document_id | Unique document identifier | doc-001 |
+| chunk_id | Unique chunk identifier | doc-001-chunk-01 |
+| document_type | Type of document | policy, claim, contract, report |
+| business_domain | Business area | healthcare, finance, insurance |
+| sensitivity | Data classification | public, internal, confidential, restricted |
+| owner | Business/data owner | claims-team |
+| access_role | Roles allowed to retrieve this content | analyst, manager, auditor |
+| source_system | Original source | sharepoint, snowflake, s3, databricks |
+| effective_date | Date when document became valid | 2026-01-01 |
+| data_quality_score | Quality score for document or chunk | 92 |
+| lineage_id | Reference to upstream system/pipeline | pipeline-claims-001 |
+

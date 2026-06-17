@@ -95,6 +95,46 @@ python demo.py
 Run tests:
 
 ```bash
+
+## Project Structure
+
+```text
+metadata-enriched-enterprise-rag/
+├── README.md
+├── demo.py
+├── requirements.txt
+├── data/
+│   ├── sample_metadata.csv
+│   └── sample_metadata.json
+├── docs/
+│   ├── research_problem.md
+│   ├── experiment_design.md
+│   ├── literature_review_plan.md
+│   ├── paper_outline.md
+│   └── results_template.md
+├── architecture/
+│   └── reference_architecture.md
+├── src/
+│   ├── ingestion.py
+│   ├── metadata_enrichment.py
+│   ├── policy_filter.py
+│   ├── retriever.py
+│   ├── evaluator.py
+│   └── audit_logger.py
+└── tests/
+    └── test_policy_filter.py
+
+| Module                        | Purpose                                                   |
+| ----------------------------- | --------------------------------------------------------- |
+| `src/ingestion.py`            | Loads and chunks sample enterprise documents              |
+| `src/metadata_enrichment.py`  | Adds enterprise metadata to document chunks               |
+| `src/retriever.py`            | Retrieves relevant chunks using a simple keyword baseline |
+| `src/policy_filter.py`        | Applies role-based access filtering                       |
+| `src/evaluator.py`            | Calculates simple RAG evaluation metrics                  |
+| `src/audit_logger.py`         | Creates audit events for retrieval activity               |
+| `demo.py`                     | Runs the end-to-end prototype                             |
+| `tests/test_policy_filter.py` | Tests policy-aware access behavior                        |
+
 pytest
 ```
 

@@ -8,7 +8,7 @@ This script connects:
 4. Policy-aware filtering
 5. Evaluation
 """
-
+from src.audit_logger import create_audit_event, print_audit_event
 from src.ingestion import ingest_documents
 from src.metadata_enrichment import enrich_chunk
 from src.retriever import retrieve_top_k
@@ -153,6 +153,33 @@ def run_demo():
     print(f"- Hit Rate: {hit_rate}")
     print(f"- Citation Coverage: {citation_coverage}")
     print(f"- Unauthorized Retrieval Rate: {unauthorized_rate}")
+    hit_rate = calculate_hit_rate(retrieved_chunks, expected_chunk_id)
+    citation_coverage = calculate_citation_coverage(answer_sources, allowed_chunks)
+    unauthorized_rate = calculate_unauthorized_retrieval_rate(
+        allowed_chunks,
+        user_role,
+    )
+
+    print("\nStep 4: Evaluation Metrics")
+    print(f"- Hit Rate: {hit_rate}")
+    print(f"- Citation Coverage: {citation_coverage}")
+    print(f"- Unauthorized Retrieval Rate: {unauthorized_rate}")
+
+    evaluation_metrics = {
+        "hit_rate": hit_rate,
+        "citation_coverage": citation_coverage,
+        "unauthorized_retrieval_rate": unauthorized_rate,
+    }
+
+    audit_event = create_audit_event(
+        user_role=user_role,
+        query=query,
+        retrieved_chunks=retrieved_chunks,
+        allowed_chunks=allowed_chunks,
+        evaluation_metrics=evaluation_metrics,
+    )
+
+    print_audit_event(audit_event)
 
     print("\nInterpretation:")
     print(
@@ -160,7 +187,6 @@ def run_demo():
         "is analyst and the healthcare report is restricted to auditors, policy-aware "
         "retrieval blocks the restricted chunk."
     )
-
 
 if __name__ == "__main__":
     run_demo()
